@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}  
+
+{% block title %}Templates - BoostUp Insights{% endblock %}
+
+{% block content %}
+<section id="services" class="full-section">
+    <div class="services-content">
+        <h2>Templates for Bloggers/Influencers</h2>
+        <div class="card-container">
+            <div class="card" style="width: 18rem; height:29rem">
+                <img src= "{% static 'images/dark-theme.jpg' %}"class="card-img-top" alt="Dark Theme Image">
+                <div class="card-body">
+                    <h5 class="card-title">Dark Lens</h5>
+                    <p class="card-text">A modern template with dark tones, responsive design, interactive elements, and vibrant accents.</p>
+                    <a href="{% url 'Template1' %}" class="btn btn-primary">view</a><hr>
+                    <a href="{% url 'Template1' %}" class="btn btn-primary">Checkout</a>
+                </div>
+            </div>
+                      
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/medium-theme.jpg' %}" class="card-img-top" alt="Blogger">
+                <div class="card-body">
+                    <h5 class="card-title">VividLens</h5>
+                    <p class="card-text">A dark, sleek, responsive template with interactive elements, perfect for influencers or bloggers.</p>
+                    <a href="{% url 'Template2' %}" class="btn btn-primary">view</a><hr>
+                    <a href="{% url 'Template1' %}" class="btn btn-primary">Checkout</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/blue-theme.jpg' %}" class="card-img-top" alt="Blogger">
+                <div class="card-body">
+                    <h5 class="card-title">SkylineFrame</h5>
+                    <p class="card-text">A sleek, modern template with dark tones, interactive elements, and a professional, minimalist aesthetic.</p>
+                    <a href="{% url 'Template3' %}" class="btn btn-primary">view</a><hr>
+                    <a href="{% url 'Template1' %}" class="btn btn-primary">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

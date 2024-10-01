@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}  <!-- Add this line at the top -->
+
+{% block title %}Services - BoostUp Insights{% endblock %}
+
+{% block content %}
+<section id="services" class="full-section">
+    <div class="services-content">
+        <h2>Services</h2>
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/Blogger.jpg' %}" class="card-img-top" alt="Blogger">
+                <div class="card-body">
+                    <h5 class="card-title">Bloggers/Influencers</h5>
+                    <p class="card-text">Build a professional blogging platform to share your ideas, stories, and insights with the world. Enjoy seamless content management, custom design, and integrated SEO to grow your audience effortlessly.</p>
+                    <a href="{% url 'blogs' %}" class="btn btn-primary">See templates for bloggers/Influencers</a>
+                </div>
+            </div>
+            <div class="card photographer-card" style="width: 18rem;">
+                <img src="{% static 'images/photographer.jpg' %}" class="card-img-top" alt="Photographer">
+                <div class="card-body">
+                    <h5 class="card-title">Photographer/Makeup-Artist(unavailable)</h5>
+                    <p class="card-text">Showcase your portfolio with a beautifully crafted website tailored for photographers. Highlight your best work, attract clients, and manage your bookings—all in one place.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card ecommerce-card" style="width: 18rem;">
+                <img src="{% static 'images/ecom.jpg' %}" class="card-img-top" alt="E-commerce">
+                <div class="card-body">
+                    <h5 class="card-title">E-commerce(unavailable)</h5>
+                    <p class="card-text">Effortlessly launch and manage your online store. From product listings and secure payments to inventory management and real-time data analytics, we provide everything you need to sell more and scale your business with ease.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,196 @@
+/* Logo style */
+.logo-img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Home page background image */
+#home {
+    background-image: url("/static/images/HomePage.jpg"); /* Corrected path */
+    background-size: cover;      /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 83vh;               /* Full height of the viewport */
+
+    display: flex;
+    justify-content: center;     /* Center the content horizontally */
+    align-items: center;         /* Center the content vertically */
+    color: white;                /* Ensure text is visible against the background */
+}
+
+/* Home page content styling */
+.Home-Page {
+    text-align: center;
+    max-width: 900px;              /* Limit the width of the content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve text readability */
+    padding: 20px;
+    border-radius: 10px;            /* Rounded corners for the content box */
+}
+
+.Home-Page h1 {
+    font-size: 3em;                /* Larger font size for the main title */
+    margin-bottom: 20px;
+}
+
+.Home-Page p {
+    font-size: 1.2em;              /* Adjust font size for the paragraph */
+    margin-bottom: 20px;
+}
+
+/* Services section styling */
+#services {
+    background-color: rgba(178, 223, 237, 0.345);  /* Background color for the services section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center; /* Centering the title */
+}
+
+#services h2 {
+    font-size: 2.5em;  /* Make the title larger */
+    margin-bottom: 40px;  /* Add spacing between the title and the cards */
+}
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    justify-content: space-evenly;  /* Space cards evenly */
+    width: 100%;
+    max-width: 1200px;  /* Limit the width for better layout control */
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+    gap: 20px;  /* Add some space between cards */
+}
+
+.card {
+    width: 18rem;
+    margin-bottom: 20px; /* Space below each card */
+}
+
+/* About Section Styling */
+#about {
+    height: 85vh; /* Full viewport height */
+    background-color: rgba(12, 18, 20, 0.76);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center;     /* Center the content horizontally */
+    padding: 20px;
+    color: white;
+    text-align: center; 
+}
+
+#about h2 {
+    font-size: 2.5em;  
+    margin-bottom: 40px;  
+}
+
+/* Carousel styling for centering */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;              /* Take full width */
+    max-width: 600px;          /* Set max width for the carousel */
+    margin: 0 auto;            /* Center carousel horizontally */
+}
+
+.carousel {
+    width: 100%;               /* Ensure the carousel takes the container width */
+    height: auto;              /* Auto height to preserve aspect ratio */
+}
+
+.carousel-inner img {
+    width: 100%;               /* Ensure images take full width of carousel */
+    height: auto;              /* Auto height to keep images proportional */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 968px) {
+    #home {
+        height: 789px;              /* Adjust height for smaller devices */
+        padding: 50px 20px;
+    }
+
+    .Home-Page {
+        max-width: 100%;           /* Allow full width on smaller screens */
+        padding: 10px;             /* Adjust padding */
+    }
+
+    .Home-Page h1 {
+        font-size: 2.5em;          /* Adjust font size on smaller screens */
+    }
+
+    .Home-Page p {
+        font-size: 1em;            /* Adjust paragraph size */
+    }
+
+    .full-section {
+        height: auto; 
+        padding: 50px 50px;
+        width: auto;
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        max-width: 100%;        /* Make sure carousel fits smaller screens */
+    }
+
+    #about h2 {
+        font-size: 2em;         /* Adjust font size on smaller screens */
+    }
+}
+
+/* Hover effect for photographer and ecommerce cards */
+.card-container .card {
+    position: relative;
+}
+
+.card.photographer-card:hover::after,
+.card.ecommerce-card:hover::after {
+    content: "This service is currently unavailable";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 1192px; /* Adjust the width to reduce spacing */
+    }
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 994px;
+    }
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 1550px;
+    }
+}

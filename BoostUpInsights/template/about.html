@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - BoostUp Insights{% endblock %}
+
+{% block content %}
+<section id="about" class="full-section">
+    <div class="container text-center">
+        <h2 class="mb-4">About Us</h2>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <div id="carouselExample" class="carousel slide mb-4" data-bs-ride="carousel">
+                <!-- Carousel Images -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/DATAprotection.jpg' %}" class="d-block w-100" alt="Blogger">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/Service.jpg' %}" class="d-block w-100" alt="E-commerce">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/lowCost.jpg' %}" class="d-block w-100" alt="Photographer">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- About Us Text -->
+        <p>At BoostUp insights, we specialize in creating beautiful, functional websites for bloggers, photographers, e-commerce businesses, and more. With a strong commitment to providing top-notch service at affordable prices, our mission is to empower small businesses and creatives to establish their online presence without breaking the bank.
+            We take privacy and data security seriously, adhering strictly to GDPR data practices to ensure your information is always protected. Our services go beyond just creating websites—we offer continuous support, analytics, and the tools you need to grow.</p>
+    </div>
+</section>
+{% endblock %}
